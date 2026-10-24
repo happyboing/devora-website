@@ -1,7 +1,8 @@
 import { useRef } from 'react'
 import { motion, useScroll, useSpring, useTransform } from 'motion/react'
 
-import { about } from '@/data/company'
+import csrPhoto from '@assets/GROUP PICTURE.jpg'
+import { about, csr } from '@/data/company'
 import { SECTIONS } from '@/lib/scroll'
 import { KineticText } from '@/components/ui/KineticText'
 import { Parallax } from '@/components/ui/Parallax'
@@ -79,44 +80,28 @@ export function AboutSection() {
               />
             ))}
 
-            {/* Structural graphic: a layered prism, drifting against the scroll. */}
+            {/* Corporate social responsibility: the team with the Project SOAP donations. */}
             <Parallax distance={40} className="mt-4">
               <TiltCard max={4}>
-                <SpotlightCard className="panel panel-hover relative overflow-hidden p-6 sm:p-8 lg:min-h-[19rem]">
-                  <div className="relative h-full min-h-[15rem]">
-                    <div
-                      className="absolute inset-0 rounded-2xl"
-                      style={{
-                        backgroundImage:
-                          'radial-gradient(120% 120% at 50% 0%, rgba(224,66,124,0.22), transparent 62%)',
-                      }}
-                    />
-                    <div
-                      className="absolute -left-10 top-6 size-[16rem] rounded-full opacity-60 blur-[60px]"
-                      style={{ background: 'radial-gradient(circle, rgba(224,66,124,0.32), transparent 68%)' }}
-                    />
-                    <div
-                      className="absolute -bottom-14 right-[-5rem] size-[20rem] rounded-full opacity-50 blur-[70px]"
-                      style={{ background: 'radial-gradient(circle, rgba(94,214,255,0.24), transparent 68%)' }}
-                    />
-
-                    {/* Counter-rotating guides give the prism a little orbit of its own. */}
-                    <div className="anim-spin-slower absolute left-1/2 top-1/2 size-[20rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/10" />
-                    <div className="anim-spin-slow absolute left-1/2 top-1/2 size-[13rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-aura/20" />
-
-                    <div
-                      className="anim-float absolute left-1/2 top-1/2 size-[15rem] -translate-x-1/2 -translate-y-1/2 opacity-70"
-                      style={{
-                        clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)',
-                        backgroundImage:
-                          'conic-gradient(from 200deg, rgba(224,66,124,0.55), transparent 40%, rgba(94,214,255,0.38) 70%, transparent 100%)',
-                      }}
-                    />
-                    <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-                      <span className="t-mono text-dusk">Framework</span>
-                      <span className="text-sm text-mist">Design · Engineering · Human-Computer Interaction</span>
+                <SpotlightCard className="panel panel-hover relative overflow-hidden p-4 sm:p-5">
+                  <figure className="relative">
+                    <div className="overflow-hidden rounded-xl border border-white/10">
+                      <img
+                        src={csrPhoto}
+                        alt="The Devora team holding the hygiene supplies donated for Project SOAP 2026 at Mapúa Malayan Colleges Laguna."
+                        loading="lazy"
+                        decoding="async"
+                        className="aspect-video w-full object-cover"
+                      />
                     </div>
-                  </div>
+                    <figcaption className="flex flex-col gap-2 px-1 pb-1 pt-5 sm:px-2">
+                      <span className="t-mono text-aura-soft">{csr.label}</span>
+                      <h3 className="font-display text-lg font-semibold tracking-tight text-frost sm:text-xl">
+                        {csr.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-mist">{csr.description}</p>
+                    </figcaption>
+                  </figure>
                 </SpotlightCard>
               </TiltCard>
             </Parallax>

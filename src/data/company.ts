@@ -28,6 +28,13 @@ export const about = {
   ],
 } as const
 
+export const csr = {
+  label: 'Corporate Social Responsibility',
+  title: 'Project SOAP 2026',
+  description:
+    'We are proud to support Project SOAP by Mapúa Malayan Colleges Laguna through donations of essential hygiene supplies, promoting health, cleanliness, and dignity among Persons Deprived of Liberty (PDLs).',
+} as const
+
 export const vision = {
   label: 'Our Vision',
   text: 'To help businesses build a strong digital presence through websites that are functional, engaging, and easy to use.',

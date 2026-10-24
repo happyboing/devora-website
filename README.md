@@ -90,6 +90,7 @@ which gives GitHub Pages the same "serve the app for every route" behaviour that
 assets/                     Original Devora logo PNGs (never modified)
                             devorapubmat1-opt.jpg — web copy of the job pubmat
                             devorapubmat1.png     — original pubmat, never modified
+                            GROUP PICTURE.jpg     — CSR photo for Project SOAP 2026
                             KAIRA…JOSHUA.png      — original member portraits
 public/                     favicon.svg, _redirects (SPA fallback)
                             team/ — web-sized member portraits (see below)
