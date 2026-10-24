@@ -440,6 +440,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    /* A pill must always fit its label: inside a tight flex row the label would
+       otherwise collapse and the icon would land on top of it. */
+    min-width: max-content;
     gap: 0.55rem;
     padding: 0.8rem 1.45rem;
     border-radius: 999px;

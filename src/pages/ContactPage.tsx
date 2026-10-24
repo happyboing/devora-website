@@ -252,7 +252,7 @@ export function ContactPage() {
                     ) : null}
                   </div>
 
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
                     <p className="text-xs text-dusk">
                       Required fields validated on the client. No data is transmitted.
                     </p>
