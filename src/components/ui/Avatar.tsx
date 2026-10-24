@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { initialsOf } from '@/data/team'
+import { assetUrl } from '@/lib/base'
 import { cn } from '@/lib/cn'
 
 type AvatarProps = {
@@ -20,7 +21,8 @@ type AvatarProps = {
  */
 export function Avatar({ name, photo, className }: AvatarProps) {
   const [failed, setFailed] = useState(false)
-  const showPhoto = Boolean(photo) && !failed
+  const src = photo ? assetUrl(photo) : null
+  const showPhoto = Boolean(src) && !failed
 
   return (
     <span
@@ -43,9 +45,9 @@ export function Avatar({ name, photo, className }: AvatarProps) {
         style={{ backgroundImage: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent)' }}
       />
 
-      {showPhoto ? (
+      {showPhoto && src ? (
         <img
-          src={photo}
+          src={src}
           alt=""
           loading="lazy"
           decoding="async"
