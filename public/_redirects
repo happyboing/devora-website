@@ -1,0 +1,8 @@
+# Devora uses client-side routing (React Router, BrowserRouter).
+# Static hosts must serve index.html for any deep link such as /team, /careers
+# or /contact. This file is understood by Netlify and Cloudflare Pages.
+#
+# Vite's own `npm run preview` already falls back to index.html automatically.
+# On other hosts, configure an equivalent "rewrite all to /index.html" rule.
+
+/*    /index.html   200

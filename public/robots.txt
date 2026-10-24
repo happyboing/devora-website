@@ -1,0 +1,5 @@
+# Devora — academic company website project.
+# No production domain is published, so only the crawl rules are declared here.
+
+User-agent: *
+Allow: /
